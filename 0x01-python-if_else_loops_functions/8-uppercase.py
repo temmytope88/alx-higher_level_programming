@@ -9,4 +9,3 @@ def uppercase(str):
         print("{:s}".format(char), end="")
     print('')
   
-s
