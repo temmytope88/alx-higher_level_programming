@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def uppercase(str):
   lists = str.split()
   print(lists)
