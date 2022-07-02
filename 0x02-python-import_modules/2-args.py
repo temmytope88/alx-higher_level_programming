@@ -2,7 +2,6 @@
 import sys
 
 length = len(sys.argv)
-print(sys.argv)
 num = length - 1
 if num == 0:
     print("{} argumnets".format(num))
