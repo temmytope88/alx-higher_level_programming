@@ -2,5 +2,7 @@
 # class
 """ class rectangle """
 class Rectangle:
+
+    
     """ class rectangle """
     pass
