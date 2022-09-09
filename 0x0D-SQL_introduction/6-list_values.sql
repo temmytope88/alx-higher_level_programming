@@ -1,2 +1,2 @@
---selects all rows of a table
+-- selects all rows of a table
 SELECT * FROM first_table;
