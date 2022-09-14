@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-# class
+""" recctangle module """
+
+
 class Rectangle:
+
     """
     class rectangle
     """
