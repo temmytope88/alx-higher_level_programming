@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-# class
+""" recctangle module """
+
+
 class Rectangle:
-    """ class rectangle """
+
+    """
+    class rectangle
+    """
 
     def __init__(self, width=0, height=0):
-        """ instantition of class rectangle with optional width and height """
+        """ instantiation of class rectangle with optional width and height """
         self.width = width
         self.height = height
 
@@ -16,10 +21,10 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """ width setter """
-        if value < 0:
-            raise ValueError('width must be an integer')
-        elif type(value) is not int:
+        if isinstance(value, int) is False:
             raise TypeError('width must be an integer')
+        elif value < 0:
+            raise ValueError('width must be >= 0')
         else:
             self.__width = value
 
@@ -31,10 +36,10 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """ height setter """
-        if value < 0:
-            raise ValueError('height must be an integer')
-        elif type(value) is not int:
+        if isinstance(value, int) is False:
             raise TypeError('height must be an integer')
+        elif value < 0:
+            raise ValueError('height must be >= 0')
         else:
             self.__height = value
 
