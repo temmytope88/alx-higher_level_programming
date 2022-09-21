@@ -5,7 +5,6 @@
 class Square:
     """ a square module """
 
-
     def __init__(self, size):
         """ intantiation of size of the square """
 
