@@ -37,5 +37,5 @@ class Square:
         if self.size == 0:
             print()
         else:
-            for i in range (value):
+            for i in range(value):
                 print(constant * value)
