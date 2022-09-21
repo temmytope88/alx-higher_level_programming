@@ -40,13 +40,11 @@ class Square:
         else:
             if self.position[0] > 0:
                 for i in range(value):
-                    print(" " * self.position[0], end="")
+                    print(" " * self.position[1], end="")
                     print(constant * value)
-                print()
             else:
                 for i in range(value):
                     print(constant * value)
-                print()
 
     @property
     def position(self):
