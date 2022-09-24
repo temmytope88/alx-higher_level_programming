@@ -34,12 +34,6 @@ class Rectangle(BaseGeometry):
         else:
             return super().area()
 
-    def print(self):
-        """method that prints the dimemnsion
-        of a rectangle
-        """
-        print("[Rectangle] {}/{}".format(self.__width, self.__height))
-
     def __str__(self):
         """method that returns the dimension of a
         rectangle

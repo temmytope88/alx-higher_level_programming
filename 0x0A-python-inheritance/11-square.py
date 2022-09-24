@@ -32,11 +32,6 @@ class Square(Rectangle):
         """
         return super().area()
 
-    def print(self):
-        """print the dimension of the sqaure
-        """
-        print("[Square] {}/{}".format(self.__size, self.__size))
-
     def __str__(self):
         """return the dimension of the square
 

@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 lookup = __import__('0-lookup').lookup
+Rectangle = __import__('9-rectangle').Rectangle
 
-print(lookup(int))
+print(lookup(Rectangle))
 
 """Rectangle = __import__('9-rectangle').Rectangle
 
