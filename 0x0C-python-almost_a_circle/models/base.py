@@ -14,7 +14,7 @@ class Base:
         Args:
             id (int, optional): Model instant id
         """
-        Base.__nb_objects +=1
+        Base.__nb_objects += 1
         if id is None:
             self.id = Base.__nb_objects
         else:
