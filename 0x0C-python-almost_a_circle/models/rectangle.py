@@ -173,6 +173,9 @@ class Rectangle(Base):
         return value
 
     def update(self, *args):
+        """ A function that update the attributes of
+            a rectangle object
+        """
         if len(args) == 5:
             self.id = args[0]
             self.height =args[2]
