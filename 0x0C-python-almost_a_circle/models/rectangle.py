@@ -154,8 +154,14 @@ class Rectangle(Base):
         """
         w = self.__width
         h = self.__height
+        x = self.__x
+        y = self.__y
+
+        for i in range(y):
+            print("")
 
         for i in range(h):
+            print(" " * x, end="")
             print("#" * w)
 
     def __str__(self):
