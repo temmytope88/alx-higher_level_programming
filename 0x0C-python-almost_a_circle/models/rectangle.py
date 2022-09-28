@@ -171,3 +171,29 @@ class Rectangle(Base):
             self.id, self.__x, self.__y,
             self.__width, self.__height)
         return value
+
+    def update(self, *args):
+        if len(args) == 5:
+            self.id = args[0]
+            self.height =args[2]
+            self.width = args[1]
+            self.x = args[3]
+            self.y = args[4]
+
+        if len(args) == 4:
+            self.id = args[0]
+            self.height =args[2]
+            self.width = args[1]
+            self.x = args[3]
+
+        if len(args) == 3:
+            self.id = args[0]
+            self.height =args[2]
+            self.width = args[1]
+
+        if len(args) == 2:
+            self.id = args[0]
+            self.width = args[1]
+
+        if len(args) == 1:
+            self.id = args[0]
