@@ -153,7 +153,7 @@ class Rectangle(Base):
             image representtion of a rectangle object
         """
         w = self.__width
-        h = self.__width
+        h = self.__height
 
         for i in range(h):
             print("#" * w)
