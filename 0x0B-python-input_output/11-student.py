@@ -22,23 +22,23 @@ class Student:
         dictionary of the Student class atttibute.
         """
         if attrs is None:
-            value =  self.__dict__
+            value = self.__dict__
         else:
             value = {}
             for item in attrs:
                 if item == "first_name":
-                    value.update({item:self.first_name})
+                    value.update({item: self.first_name})
                 if item == "last_name":
-                    value.update({item:self.last_name})
+                    value.update({item: self.last_name})
                 if item == "age":
-                    value.update({item:self.age})
+                    value.update({item: self.age})
         return value
 
     def reload_from_json(self, json):
-            for x, y in json.items():
-                if x == "first_name":
-                    self.first_name = y
-                if x == "last_name":
-                    self.last_name = y
-                if x == "age":
-                    self.age = y
+        for x, y in json.items():
+            if x == "first_name":
+                self.first_name = y
+            if x == "last_name":
+                self.last_name = y
+            if x == "age":
+                self.age = y

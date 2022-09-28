@@ -11,19 +11,19 @@ list_item = []
 
 filename = "add_item.json"
 
-if os.path.exists(filename):
-    data = load_from_json_file(filename)
+if os.path.exists("add_item.json"):
+    data = load_from_json_file("add_item.json")
     list_item = data
     if len(sys.argv) > 1:
         for item in range(1, len(sys.argv)):
             list_item.append(sys.argv[item])
-        save_to_json_file(list_item, filename)
+        save_to_json_file(list_item, "add_item.json")
     else:
         pass
 else:
     if len(sys.argv) > 1:
         for item in range(1, len(sys.argv)):
             list_item.append(sys.argv[item])
-        save_to_json_file(list_item, filename)
+        save_to_json_file(list_item, "add_item.json")
     else:
-        save_to_json_file(list_item, filename)
+        save_to_json_file(list_item, "add_item.json")
