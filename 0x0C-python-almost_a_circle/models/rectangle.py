@@ -147,6 +147,7 @@ class Rectangle(Base):
             int: Area of a rectangle
         """
         return self.__width * self.__height
+
     def display(self):
         """ A function that prints the
             image representtion of a rectangle object
