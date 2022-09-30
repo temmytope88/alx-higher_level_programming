@@ -104,7 +104,7 @@ class Rectangle(Base):
             ValueError: x should be >= 0
         """
         if isinstance(value, int) is False:
-            raise TypeError("x be an integer")
+            raise TypeError("x must be an integer")
         else:
             if value < 0:
                 raise ValueError("x must be >= 0")
