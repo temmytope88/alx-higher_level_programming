@@ -83,35 +83,6 @@ class Rectangle(Base):
                 self.__height = value
 
     @property
-    def y(self):
-        """return the y-position of a Rectangle object
-
-        Returns:
-            y:y-position of a Rectangle object
-        """
-        return self.__y
-
-    @width.setter
-    def y(self, value):
-        """sets the value of y
-
-        Args:
-            value (int): indicates the y-position of
-            a rectangle instance
-
-        Raises:
-            TypeError: y should be an integer
-            ValueError: y should be >= 0
-        """
-        if isinstance(value, int) is False:
-            raise TypeError("y must be an integer")
-        else:
-            if value < 0:
-                raise ValueError("y must be >= 0")
-            else:
-                self.__y = value
-
-    @property
     def x(self):
         """return the x-position of a Rectangle object
 
@@ -139,3 +110,32 @@ class Rectangle(Base):
                 raise ValueError("x must be >= 0")
             else:
                 self.__x = value
+
+    @property
+    def y(self):
+        """return the y-position of a Rectangle object
+
+        Returns:
+            y:y-position of a Rectangle object
+        """
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """sets the value of y
+
+        Args:
+            value (int): indicates the y-position of
+            a rectangle instance
+
+        Raises:
+            TypeError: y should be an integer
+            ValueError: y should be >= 0
+        """
+        if isinstance(value, int) is False:
+            raise TypeError("y must be an integer")
+        else:
+            if value < 0:
+                raise ValueError("y must be >= 0")
+            else:
+                self.__y = value
