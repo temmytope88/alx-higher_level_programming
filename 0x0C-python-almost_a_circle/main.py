@@ -6,7 +6,7 @@ if __name__ == "__main__":
 
 
     s1 = Square(5)
-    print(s1.x)
+    print(s1.height)
     print(s1)
     print(s1.area())
     s1.display()
