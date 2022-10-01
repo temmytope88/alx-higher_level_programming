@@ -219,4 +219,9 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
+        """a dictionary of the class attribute
+
+        Returns:
+            dictionary: a dictionary of the class attribute
+        """
         return self.__dict__
