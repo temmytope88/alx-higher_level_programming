@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Module for the Rectangle class"""
-from typing import Type
 from models.base import Base
 
 
@@ -17,7 +16,7 @@ class Rectangle(Base):
             y (int, optional): y-axis position. Defaults to 0.
             id (_type_, optional): id of the instance. Defaults to None.
         """
-        Base.__init__(self, id)
+        super().__init__(id)
 
         self.height = height
         self.width = width
