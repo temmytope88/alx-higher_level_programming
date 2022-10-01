@@ -20,31 +20,7 @@ class Square(Rectangle):
         """
         height = size
         width = size
-        super().__init__(width, height, x, y, id=None)
-
-    @property
-    def size(self):
-        """return the size of a square object
-
-        Returns:
-            size: size a square object
-        """
-        return self.width
-
-    @size.setter
-    def size(self, value):
-        """sets the value of y
-
-        Args:
-            value (int): indicates the y-position of
-            a rectangle instance
-
-        Raises:
-            TypeError: y should be an integer
-            ValueError: y should be >= 0
-        """
-        self.width = value
-        self.height = value
+        super().__init__(width, height, x, y, id)
 
     def __str__(self):
         """it retruns [Square] (<id>) <x>/<y> - <width>/<height>
