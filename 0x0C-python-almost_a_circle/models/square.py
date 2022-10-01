@@ -80,3 +80,4 @@ class Square(Rectangle):
 
                 if key == "y":
                     self.y = value
+
