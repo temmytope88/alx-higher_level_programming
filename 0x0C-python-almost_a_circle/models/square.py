@@ -18,14 +18,28 @@ class Square(Rectangle):
             y (int, optional): _description_. Defaults to 0.
             id (_type_, optional): _description_. Defaults to None.
         """
-        height = size
-        width = size
-        super().__init__(width, height, x, y, id)
+        super().__init__(size, size, x, y, id)
+
+    @property
+    def size(self):
+        """return the size of a square object
+
+        Returns:
+            size: size a square object
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """sets the value of size
+        """
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """it retruns [Square] (<id>) <x>/<y> - <width>/<height>
         """
-        value = "[Rectangle] ({}) {}/{} - {}".format(
+        value = "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y,
             self.size)
         return value
