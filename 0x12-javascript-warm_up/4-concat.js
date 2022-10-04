@@ -1,4 +1,4 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
+const a = process.argv;
 // print process.argv
-console.log(argv[2] + ' is ' + argv[3]);
+console.log(a[2] + ' is ' + a[3]);
