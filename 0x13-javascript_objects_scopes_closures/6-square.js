@@ -8,11 +8,11 @@ module.exports = class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (c === 'undefined') {
-      print();
+    if (c === undefined) {
+	super.print();
     } else {
       for (let i = 1; i <= this.height; i++) {
-              console.log(c.repeat(this.width));
+        console.log(c.repeat(this.width));
       }
     }
   }
