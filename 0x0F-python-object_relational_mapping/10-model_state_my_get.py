@@ -15,11 +15,11 @@ if __name__ == "__main__":
     session = Session()
     value = sys.argv[4]
     results = session.query(State.id).filter
-    (State.name == value).order_by(State.id)
+    (State.name == value).one()
     if results:
         for result in results:
             print("{}".format(result[0]))
     else:
         print("Not found")
 
-    session.close(s)
+    session.close()
