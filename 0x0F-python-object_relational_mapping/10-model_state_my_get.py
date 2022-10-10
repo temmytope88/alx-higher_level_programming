@@ -21,3 +21,5 @@ if __name__ == "__main__":
             print("{}".format(result[0]))
     else:
         print("Not found")
+
+    session.close(s)
