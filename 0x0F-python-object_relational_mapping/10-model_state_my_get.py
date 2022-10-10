@@ -15,8 +15,8 @@ if __name__ == "__main__":
     session = Session()
 
     value = sys.argv[4]
-    results = session.query(State.id).filter(State.name == value).one()
-    if results:
+    result = session.query(State.id).filter(State.name == value).one()
+    if result:
         print("{}".format(result[0]))
     else:
         print("Not found")
