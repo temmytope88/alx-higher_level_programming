@@ -15,7 +15,7 @@ if __name__ == "__main__":
     cur.execute("""SELECT cities.name \
         FROM cities JOIN states ON states.id = cities.state_id
         WHERE states.name = '%s'
-        ORDER BY cities.id ASC""" % (value))
+        ORDER BY cities.id ASC""" % (value,))
     rows = cur.fetchall()
 
     i = 0
@@ -24,7 +24,7 @@ if __name__ == "__main__":
         if i == count:
             print(rows[i][0])
         else:
-            print(rows[i][0], end=" ")
+            print(rows[i][0], end=", ")
         i = i + 1
 
     cur.close()
