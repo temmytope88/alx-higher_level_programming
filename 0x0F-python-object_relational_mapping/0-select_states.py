@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ Module the connects to database and
 queries the database """
-
 import MySQLdb
 import sys
 
@@ -11,7 +10,7 @@ db = MySQLdb.connect(host="localhost", user=sys.argv[1],
 cur = db.cursor()
 cur.execute('SELECT * FROM states ORDER BY id ASC')
 rows = cur.fetchall()
-
+s
 i = 0
 while(i < len(rows)):
     print(rows[i])
