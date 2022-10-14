@@ -19,11 +19,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    try:
-        states = session.query(State).filter(State.name.like('%a%')).all()
-        for state in states:
-            session.delete(state)
-        session.commit()
-    except Exception as err:
-        print(err)
+    result = session.query(State).\
+        filter(State.name.like('%a%')).delete(synchronize_session=False)
+    session.commit()
     session.close()
