@@ -20,6 +20,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     result = session.query(State).\
-        filter(State.name.like('%a%')).delete(synchronize_session=False)
+        filter(State.name.like('%a%' or '%a' or 'a%')).delete(synchronize_session=False)
     session.commit()
     session.close()
