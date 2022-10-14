@@ -12,20 +12,24 @@ if __name__ == "__main__":
                          db=sys.argv[3], port=3306)
     cur = db.cursor()
     value = sys.argv[4]
-    cur.execute("""SELECT cities.name \
-        FROM cities JOIN states ON states.id = cities.state_id
-        WHERE states.name = '%s'
-        ORDER BY cities.id ASC""" % (value,))
-    rows = cur.fetchall()
+    if value:
+        cur.execute("""SELECT cities.name
+                    FROM cities JOIN states
+                    ON states.id = cities.state_id
+                    WHERE states.name = '{:s}'
+                    ORDER BY cities.id ASC""".format(value))
+        rows = cur.fetchall()
 
-    i = 0
-    count = len(rows) - 1
-    while(i < len(rows)):
-        if i == count:
-            print(rows[i][0])
-        else:
-            print(rows[i][0], end=", ")
-        i = i + 1
+        i = 0
+        count = len(rows) - 1
+        while(i < len(rows)):
+            if i == count:
+                print(rows[i][0])
+            else:
+                print(rows[i][0], end=", ")
+            i = i + 1
+    else:
+        print("\n")
 
     cur.close()
     db.close()
