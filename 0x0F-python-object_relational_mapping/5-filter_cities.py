@@ -29,7 +29,7 @@ if __name__ == "__main__":
                 print(rows[i][0], end=", ")
             i = i + 1
     else:
-        print("\n")
+        print(" ")
 
     cur.close()
     db.close()
