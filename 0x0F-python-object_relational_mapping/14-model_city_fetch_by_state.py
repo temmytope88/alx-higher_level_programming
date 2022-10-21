@@ -7,7 +7,6 @@ from model_state import State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
-
 if __name__ == "__main__":
     uri = 'mysql+mysqldb://{}:{}@localhost/{}'
     engine = create_engine(
