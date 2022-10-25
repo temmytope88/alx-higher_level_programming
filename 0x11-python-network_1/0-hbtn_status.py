@@ -5,14 +5,14 @@ import urllib.request
 
 
 if __name__ == "__main__":
-    with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
+    with urllib.request.\
+         urlopen("https://alx-intranet.hbtn.io/status") as response:
 
         c = response.read()
-        a = type(response.read())
-        b = response.read()
-        c = response.read().decode("utf-8")
+        a = type(c)
+        b = c.decode("utf-8")
 
         print("Body response")
         print("\t- type: {}".format(a))
         print("\t- content: {}".format(c))
-        print("\t- uft8 content: {}".format(c.decode("utf-8")))
+        print("\t- uft8 content: {}".format(b))
