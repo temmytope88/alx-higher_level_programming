@@ -7,10 +7,10 @@ import sys
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    try:
-        r = requests.get(url)
+    r = requests.get(url)
+    r.status_code
+    if r.status_code == requests.codes.ok:
         c = r.text
         print(c)
-
-    except requests.exceptions.HTTPError as e:
+    else:
         print("Error code: {}".format(r.status_code()))
