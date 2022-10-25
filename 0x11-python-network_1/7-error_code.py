@@ -2,16 +2,15 @@
 """ a module of http request
 using request package """
 import requests
+import sys
 
 
 if __name__ == "__main__":
+    url = sys.argv[1]
     try:
-        r = requests.get('https://alx-intranet.hbtn.io/status')
-        b = type(r.text)
+        r = requests.get(url)
         c = r.text
-        print('Body response:')
-        print('\t- type: {}'.format(b))
-        print('\t- content: {}'.format(c))
+        print(c)
 
     except requests.exceptions.HTTPError as e:
         print("Error code: {}".format(r.status_code()))
