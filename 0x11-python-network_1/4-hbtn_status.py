@@ -9,6 +9,5 @@ if __name__ == "__main__":
     a = type(r)
     b = type(r.text)
     c = r.text
-    print('Body request:')
     print('\t- type: {}'.format(b))
     print('\t- content: {}'.format(c))
