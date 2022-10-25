@@ -10,9 +10,9 @@ if __name__ == "__main__":
 
         c = response.read()
         a = type(c)
-        b = c.decode("uft-8")
+        b = c.decode("utf-8")
 
         print("Body response:")
         print("\t- type: {}".format(a))
         print("\t- content: {}".format(c))
-        print("\t- uft8 content: {}".format(b))
+        print("\t- utf8 content: {}".format(b))
