@@ -12,7 +12,7 @@ if __name__ == "__main__":
         a = type(c)
         b = c.decode("utf-8")
 
-        print("Body response")
+        print("Body response:")
         print("\t- type: {}".format(a))
         print("\t- content: {}".format(c))
         print("\t- uft8 content: {}".format(b))
