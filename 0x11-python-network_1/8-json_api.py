@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ A module the uses the requests
 module for http request """
-from msilib.schema import Error
+
 import sys
 import requests
 
@@ -23,5 +23,5 @@ if __name__ == "__main__":
             print("[{}] {}".format(info["id"], info["name"]))
         else:
             print("No result")
-    except Error as e:
+    except ValueError as e:
         print("Not a valid Json")
