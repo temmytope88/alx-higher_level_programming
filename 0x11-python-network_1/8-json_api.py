@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ A module the uses the requests
 module for http request """
-
 import sys
 import requests
 
@@ -15,7 +14,6 @@ if __name__ == "__main__":
 
     data = {"q": q}
     r = requests.post(url, data=data)
-
 
     try:
         info = r.json()
