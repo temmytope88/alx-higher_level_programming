@@ -21,5 +21,5 @@ if __name__ == "__main__":
             print("[{}] {}".format(info["id"], info["name"]))
         else:
             print("No result")
-    except KeyError as e:
+    except Exception as e:
         print("Not a valid Json")
