@@ -16,10 +16,19 @@ if __name__ == "__main__":
     info = r.json()
 
     try:
-        for i in range(0, 10):
-            data = info[i]
-            sha = data.get('sha')
-            name = data.get('commit').get('author').get('name')
-            print("{}: {}".format(sha, name))
+        if len(info) >= 10:
+            for i in range(0, 10):
+                data = info[i]
+                sha = data.get('sha')
+                name = data.get('commit').get('author').get('name')
+                print("{}: {}".format(sha, name))
+        else:
+            length = len(info)
+            for i in range(0, length):
+                data = info[i]
+                sha = data.get("sha")
+                name = data.get('commit').get('author').get('name')
+                print("{}: {}".format(sha, name))
+                
     except KeyError as e:
         print("None")
