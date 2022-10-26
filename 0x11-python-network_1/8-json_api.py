@@ -17,8 +17,8 @@ if __name__ == "__main__":
 
     if r.json():
         data = r.json()
-        if data:
-            print("[<{}>] <{}>".format(data.id, data.nme))
+        if len(data) > 0:
+            print("[{}] {}".format(data["id"], data["name"]))
         else:
             print("No result")
     else:
