@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     if info:
         if len(info) > 0:
-            print("[{}] {}".format(data["id"], data["name"]))
+            print("[{}] {}".format(info["id"], info["name"]))
         else:
             print("No result")
     else:
