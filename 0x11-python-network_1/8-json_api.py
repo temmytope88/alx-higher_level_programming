@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ A module the uses the requests
 module for http request """
+from msilib.schema import Error
 import sys
 import requests
 
@@ -14,12 +15,13 @@ if __name__ == "__main__":
 
     data = {"q": q}
     r = requests.post(url, data=data)
-    info = r.json
 
-    if info:
+
+    try:
+        info = r.json()
         if len(info) > 0:
             print("[{}] {}".format(info["id"], info["name"]))
         else:
             print("No result")
-    else:
-        print("Not a valid JSON")
+    except Error as e:
+        print("Not a valid Json")
