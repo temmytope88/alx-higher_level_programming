@@ -14,12 +14,12 @@ if __name__ == "__main__":
 
     data = {"q": q}
     r = requests.post(url, data=data)
+    info = r.json
 
-    try:
-        data = r.json()
-        if data:
+    if info:
+        if len(info) > 0:
             print("[{}] {}".format(data["id"], data["name"]))
         else:
             print("No result")
-    except:
+    else:
         print("Not a valid JSON")
