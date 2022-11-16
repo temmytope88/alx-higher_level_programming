@@ -28,6 +28,6 @@ if __name__ == "__main__":
                 data = info[i]
                 sha = data.get("sha")
                 name = data.get('commit').get('author').get('name')
-                print("{}: {}".format(sha, name))          
+                print("{}: {}".format(sha, name))
     except KeyError as e:
         print("None")
